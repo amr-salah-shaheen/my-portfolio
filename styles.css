@@ -315,7 +315,7 @@ h1 span {
 .section-title {
   font-family: "Clash Display", sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -1px;
 }
 
