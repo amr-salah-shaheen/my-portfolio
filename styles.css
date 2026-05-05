@@ -150,7 +150,7 @@ section {
 
 h1 {
   font-family: "Syne", sans-serif;
-  font-size: clamp(2rem, 6vw, 5rem);
+  font-size: clamp(2rem, 6vw, 4.5rem);
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: -2px;
@@ -213,13 +213,61 @@ h1 span {
 
 .btn-outline {
   background: transparent;
-  color: var(--text);
-  border: 2px solid var(--border);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.btn-outline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.btn-outline:hover::before {
+  transform: scaleX(1);
 }
 
 .btn-outline:hover {
   border-color: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 0 22px rgba(0, 212, 255, 0.35);
+}
+
+.btn-cv {
+  background: transparent;
   color: var(--accent);
+  border: 2px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.btn-cv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.btn-cv:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-cv:hover {
+  color: var(--bg);
+  box-shadow: 0 0 22px rgba(0, 212, 255, 0.35);
 }
 
 /* BADGE */
